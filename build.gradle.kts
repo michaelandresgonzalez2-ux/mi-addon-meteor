@@ -1,9 +1,9 @@
 plugins {
-    id("net.fabricmc.fabric-loom") version "1.6.1"
+    alias(libs.plugins.fabric.loom)
 }
 
 base {
-    archivesName = properties["archives_base_name"] as String
+    archivesName.set(properties["archives_base_name"] as String)
     version = libs.versions.mod.version.get()
     group = properties["maven_group"] as String
 }
@@ -18,6 +18,7 @@ repositories {
         url = uri("https://maven.meteordev.org/snapshots")
     }
 }
+
 
 dependencies {
     // Fabric
