@@ -19,7 +19,6 @@ repositories {
     }
 }
 
-
 dependencies {
     // Fabric
     minecraft(libs.minecraft)
